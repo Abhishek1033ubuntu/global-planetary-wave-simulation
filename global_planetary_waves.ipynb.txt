@@ -1,0 +1,45 @@
+# Cell 4: High-Contrast Quantized Global Wave Mapping
+import numpy as np
+import matplotlib.pyplot as plt
+import cartopy.crs as ccrs
+
+print("Step 7: Generating high-contrast pixelated global teleconnection map...")
+
+plt.figure(figsize=(16, 9))
+ax = plt.axes(projection=ccrs.Robinson(central_longitude=0))
+
+# Standardize map borders and gridlines
+ax.coastlines(resolution='110m', color='#2c3e50', linewidth=1.5)
+ax.gridlines(draw_labels=True, color='gray', alpha=0.2, linestyle='--')
+
+# CRITICAL CHANGE: Define sharp, discrete steps (bins) for the color bar
+# This pixelates the smooth gradient into 12 high-contrast visual zones
+color_levels = np.linspace(-1.5, 1.5, 13)
+
+# Render the map with discrete level bounds
+pixel_plot = global_susceptibility.plot(
+    ax=ax,
+    transform=ccrs.PlateCarree(),
+    cmap='RdBu_r',
+    robust=True,
+    levels=color_levels,  # Forces pixelated quantization
+    cbar_kwargs={
+        'label': r'Global Fluid Coupling Coefficient ($\Delta$MCI / $\Delta$Forcing)',
+        'shrink': 0.75,
+        'orientation': 'horizontal',
+        'pad': 0.06,
+        'ticks': [-1.5, -1.0, -0.5, 0, 0.5, 1.0, 1.5]
+    }
+)
+
+# Set an authoritative, clean academic title
+title_string = "Quantized Global Planetary Wave & Biophysical Coupling Matrix\n" + \
+               "Discrete Variance: Lower Boundary Forcing vs 200 hPa Jet Stream Sinuosity (1990–2020)"
+plt.title(title_string, fontsize=14, weight='bold', pad=15)
+
+# Save a high-resolution version directly to your Colab environment for your report
+plt.savefig('global_wave_simulation_highres.png', dpi=300, bbox_inches='tight')
+print("💾 High-resolution image saved to workspace as 'global_wave_simulation_highres.png'")
+
+plt.tight_layout()
+plt.show()
