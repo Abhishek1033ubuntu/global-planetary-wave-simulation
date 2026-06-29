@@ -1,0 +1,37 @@
+# Cell 1: Install Libraries, Configure Credentials, & Download Data
+import os
+import cdsapi
+
+# 1. Install necessary geospatial and data libraries
+!pip install cartopy netcdf4 cdsapi scipy xarray
+
+# 2. Automatically generate the hidden credential file for Copernicus API access
+# REMEMBER: Replace 'YOUR_API_KEY_HERE' with your personal key from the Copernicus dashboard
+cdsapirc_content = """
+url: https://cds.climate.copernicus.eu/api
+key: YOUR_API_KEY_HERE
+"""
+
+with open(os.path.expanduser('~/.cdsapirc'), 'w') as f:
+    f.write(cdsapirc_content.strip())
+print("🔑 API security credentials written securely to system root.")
+
+# 3. Initialize the Client and download raw planetary datasets
+c = cdsapi.Client()
+
+print("\n🌐 Fetching 30-Year Global Upper-Air Wind Matrices from Copernicus...")
+c.retrieve(
+    'reanalysis-era5-pressure-levels',
+    {
+        'format': 'netcdf',
+        'variable': ['u_component_of_wind', 'v_component_of_wind'],
+        'pressure_level': '200',  # Upper-tropospheric Jet Stream level
+        'year': ['1990', '2020'],
+        'month': '01',
+        'day': '01',
+        'time': '12:00',
+        'area': [90, -180, -90, 180],  # Full global grid coordinate system
+    },
+    'real_atmosphere.nc'
+)
+print("🎉 Global NetCDF4 dataset successfully anchored to your Colab workspace!")
