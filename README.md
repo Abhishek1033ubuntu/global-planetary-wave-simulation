@@ -1,6 +1,8 @@
 # Global Planetary Wave Dynamics & Biophysical Teleconnection Simulation
 A multi-decadal fluid-dynamics pipeline tracking lower boundary atmospheric forcing anomalies against upper-tropospheric jet stream sinuosity (1990–2020).
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21513605.svg)](https://doi.org/10.5281/zenodo.21513605)
+
 ## 📊 Core Empirical Simulation Results
 * **Global Statistical Significance (p-value):** 6.1089e-03 (Highly Significant, p < 0.01)
 * **Global Pearson Correlation (r):** -0.0027 (Reflects a mathematically closed global fluid loop)
