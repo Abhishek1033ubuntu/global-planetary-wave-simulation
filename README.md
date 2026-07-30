@@ -25,22 +25,8 @@ When analyzing the spatial structures of the coupling coefficient (Delta MCI / D
 * **The Downstream Impact:** These waves propagate along Great Circle paths into the mid-latitudes ($30^\circ	ext{N} - 60^\circ	ext{N}$), creating stagnant weather blocks and severe unseasonal temperature anomalies over populated continental zones.
 
 * ###Licence
-* # Creative Commons Legal Code
+PROPRIETARY SOURCE-AVAILABLE LICENSE & EULA
 
-Copyright (c) 2026 Abhishek Singh (UIDAI 9414 9122 9013)
-
-Attribution-NonCommercial-ShareAlike 4.0 International
-
-Creative Commons Corporation is not a law firm and does not provide legal services. Distribution of this license does not create an attorney-client relationship. Creative Commons provides this information on an "as-is" basis. Creative Commons makes no warranties regarding the information provided, and disclaims liability for damages resulting from its use.
-
-### Purpose
-
-This repository's documentation, algorithmic structures, material parameters, and technical report architectures are securely licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0). 
-
-To view a complete copy of the official legal code framework, visit:
-https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
-
-### Core Terms:
-1. **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made.
-2. **NonCommercial** — You may not use the material for commercial purposes.
-3. **ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+Copyright (c) 2026 Abhishek Singh | UIDAI: 9414 9122 9013
+Location: Madhya Pradesh, India
+Contact: abhishek1033@gmail.com | abhishek.s@live.in
