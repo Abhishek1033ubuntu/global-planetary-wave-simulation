@@ -25,7 +25,7 @@ When analyzing the spatial structures of the coupling coefficient (Delta MCI / D
 * **The Wave Gateways:** Between $15^\circ$ and $30^\circ$ latitude, planetary rotation (the Coriolis effect) twists this rising energy, generating global Rossby wave trains.
 * **The Downstream Impact:** These waves propagate along Great Circle paths into the mid-latitudes ($30^\circ	ext{N} - 60^\circ	ext{N}$), creating stagnant weather blocks and severe unseasonal temperature anomalies over populated continental zones.
 
-* ###Licence
+##Licence
 PROPRIETARY SOURCE-AVAILABLE LICENSE & EULA
 
 Copyright (c) 2026 Abhishek Singh | UIDAI: 9414 9122 9013
